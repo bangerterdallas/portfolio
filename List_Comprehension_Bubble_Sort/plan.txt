@@ -1,0 +1,110 @@
+CLASSES
+Card
+value = int
+
+def getCardNumber(self):
+def getCardPaw(self):
+def getCardCoin(self):
+def getDeckValue(self):
+
+
+Deck
+
+def shuffle(self):
+def draw(self):
+def getDeck(self):
+
+
+UML
+Requirement specs
+    Create a class called Card
+    Stores necessary data
+    Initializer that takes a single number as a parameter
+    All necessary getter type methods
+    id
+    paw
+    value
+    coin
+    Create a class called Deck
+    Used to create a single deck of cards
+    Initializer that does not take any parameters
+    Methods
+    shuffle - resets to a full deck and shuffles
+    draw – deals out the top card
+    Use the module called gronkyutil.py
+    This stores the map for paw and coin
+    It contains a function you can use to check to see if your id to value/hand/coin conversion is working properly. It may also come in handy somewhere else (hint hint).
+    Create a file called assn15-task3.py
+    It should contain a main function
+    The main function should
+    Create an instance of Deck
+    Deal a single hand of 30 cards
+    Show the user a menu
+    Sort by value
+    Call a function to sort by card value
+    Note: If you have multiple cards of the same value, they may appear in any order
+    Display the newly sorted hand
+    Print each card on a new line
+    Eg:
+    12 of Scissor Tail
+    3 of Rock Head
+    Sort by id
+    Call a function to sort by id
+    Note: This will always produce the same order
+    Display the newly sorted hand
+    Same display as above
+    Find card
+    Prompt the user to select:
+    Value
+    Hand
+    Use map!
+    Coin
+    Use map!
+    Check to see if the card with the user selection is in the hand
+    New hand
+    This should start with a newly shuffled deck
+    Quit
+    Sort functions
+    Takes a list of cards as the parameter
+    Does a bubble sort for id
+    Do an insertion sort for value
+    Search functions
+    Takes a list of cards and a key as the parameters
+    Perform a binary search to determine if the user selection is contained in the hand. (Hint: remember the requirements to do a binary search)
+    Returns true if it is found in the hand
+    Returns false if the card is not found in the hand
+
+System Design
+    No Formulas Used
+
+System Analysis
+    Create Card Class
+        Create lists with values for the deck
+        def __init__(self, value):
+        def getCardNumber(self):
+        def getCardPaw(self):
+        def getCardCoin(self):
+        def getDeckValue(self):
+        Dunder to return a string representation to print and format
+        Dunder to return a string representation to other usages
+
+    Create Deck Class
+        def shuffle(self):
+        def draw(self):
+        def getDeck(self):
+
+    Create Main Function
+        Create the Deck
+        Create the menu
+        For 1
+            Sort cards by value
+        For 2
+            Sort cards by ID
+        For 3
+            Ability to find a card in a hand
+        For 4
+            Create a hand of 30 cards
+        For 5
+            Quit
+
+Testing
