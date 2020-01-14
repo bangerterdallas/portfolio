@@ -1,0 +1,67 @@
+Requirement Specifications
+    Submit three files: plan.txt, chessboard.py, and assn10.py
+    plan.txt is the text file for how the assignments are to be done or the requirement specifications
+    chessboard.py is the file to create the modules for each box
+    assn10.py is the file where the user gives input and the actual chessboard is created with turtle.py
+        5 pts: SoftwareDevelopment Lifecycle Plan. Create a new file called plan.txt in PyCharm to type this in.
+        5 pts: Get input properly from users. You may assume the users give valid input
+        5 pts: main() is the only function defined in assn10.py, which also calls main()
+        10 pts: Create a module called chessboard.py.
+        -This contains all of the functions associated with drawing the board
+        10 pts: Define drawChessboard() with appropriate parameters
+        -This should draw the board outline, then call drawAllRectangles()
+        15 pts: Define drawAllRectangles() with appropriate parameters
+        -This should handle drawing all of the black rectangles by calling drawRectangle()
+        --NOTE: It may be easiest to call this function twice, but not required
+        15 pts: Define drawRectangle() with appropriate parameters
+        -This should draw a single black rectangle (This will be called many times by a loop!)
+        10 pts: A grid of 8x8 rectangles is properly drawn with alternating black/whites rectangles
+        -Really this means to draw the black rectangles
+        20 pts: Proper output for any location, height and width values
+        -Height and width can be different and can be blank (then use default)
+        --Note: The location should be the bottom-left corner of the chessboard
+        5 pts: Follow proper coding conventions
+
+System Analysis
+    No formulas or data analysis used
+
+System Design
+    chessboard.py-
+        #Create a function if the User does not give chessboard size
+            #Assign width and height if neither height and width are given
+            #Assign height if it is not given
+            #assign width if it is not given
+        #Create a function that will draw the chessboard outline
+            #Go to the X,Y position to draw the outline
+            #Begin draw and repeat strait length then rotate and straight height length then rotate
+        #Create a function that will print all boxes on the chessboard
+            #Repeat the draw (tip Mr. Mano suggested)
+            #Move turtle to next row to draw 4 more squares
+            #Move turtle over to draw the next square on  a row
+            #Draw rectangle
+
+    assn10.py-
+    create and define the main() funciton
+        import turtle
+        Have the User give the starting position for the chessboard
+        Have User give the width and height of the chessboard
+        Use the chessboardSizeReassignment function to assign width and height if they did not give such values
+        use the chessboardOutline function to draw the outline of the chessboard
+        Use the printAllRectangle function to print the chessboard squares
+    call the main() function
+
+Testing
+    TEST 1:
+        x,y = (-250,-100)
+        width = "", ""
+
+    TEST 2
+        x,y = (0,0)
+        width = -100, -100
+
+
+
+
+
+
+
