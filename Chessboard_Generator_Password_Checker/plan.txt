@@ -1,0 +1,69 @@
+Chessboard
+
+self.height = height
+self.width = width
+self.x_pos = startX
+self.y_pos = startY
+
+def draw_rectangle(): int
+def draw_all_rectangles(): int
+def draw(): int
+
+Password
+
+self.password = None
+self.message = ""
+self.valid = False
+
+def setPassword(self, userPassword): str
+def passwordLength(self): str
+def containsTwoInts(self): str
+def containsLetter(self): str
+def specialCharacter(self): str
+def isValid(self): str
+def getErrorMessage(self): str
+
+SOFTWARE DEVELOPMENT
+Requirement specs-
+Create a password checker that follows the following parameters:
+    Longer than 8 characters
+    Does not contain 123
+    Contains letters and numbers
+    Does not have any special characters
+
+System Analysis
+    No formulas
+
+System Design
+    # Tell the user what the password parameters are
+    # Create a loop until the user enters a password that satisfies the parameters
+    # ask the user for the desired password
+    # Run the class
+        #Create constructor
+        # Create useless method to set the password
+        # Create method to check the length to be used later in isValid
+        # Create method to check integer count to be used later in isValid
+        # Create method to check letter count to be used later in isValid
+        # Create method to check special characters to be used later in isValid
+        # check if the password is valid
+        # check the length of the password
+        # Check to see if it contains at least two numbers
+        # Check to see if it contains at least one letter
+        # Check to see if it contains any special characters
+        # If the message is blank the password is correct so the password is valid (True)
+        # Print the error messages telling the user what is wrong with their password
+    #Break the loop if password meets required parameters
+
+
+Testing
+    TEST 1
+        Password 123#
+            Prints:
+            Not long enough
+            No letters
+            Contains special character
+
+    TEST 2
+        Password 1345abc
+        Prints:
+        Password meets parameters
