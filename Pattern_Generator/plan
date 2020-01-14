@@ -1,0 +1,79 @@
+Requirement specs
+    You are going to create a program that draws cool patterns. The user will have three modes to choose from:
+    Rectangle Pattern - A circular pattern created by drawing multiple rectangles
+    Circle Pattern - A circular pattern created by drawing multiple circles
+    Super Pattern - A random selection of some number of Rectangle and Circle Patterns
+        Rubric-
+        3 pts: SoftwareDevelopment Lifecycle Plan (see assn #6 for description)
+        3 pts: Get input properly from users. You may assume the users give valid input
+        3 pts: main() is the only function defined in assn9.py, which also calls main()
+        Use the starter code properly
+        5 pts: Create a module called pattern.py.
+        This contains all of the functions associated with drawing the patterns
+        5 pts: Proper implementation and usage of reset()
+        5 pts: Proper implementation and usage of setup()
+        20 pts: Proper implementation and usage of drawRectanglePattern() as defined above
+        location, offset, width, height, count, and rotation are all used and drawn properly
+        10 pts: Proper implementation and usage of drawRectangle() as defined above
+        20 pts: Proper implementation and usage of drawCirclePattern() as defined above
+        location, offset, radius, and count are all used and drawn properly
+        10 pts: Proper implementation and usage of drawSuperPattern() as defined above
+        8 pts: Proper implementation and usage of setRandomColor() as defined above
+        5 pts: Proper implementation and usage of done() as defined above
+        3 pts: Follow proper coding conventions
+
+System analysis
+    Square perimeter = length + width + length + width
+    Circle perimeter = 2 * pi * radius
+
+System design
+    Need the following functions:
+        reset() - Erase all of the patterns and start over
+        setup()
+            Configure turtle to draw quickly
+            Configure turtle to have a window of 1000 x 800
+        drawRectanglePattern()
+            Use appropriate parameters
+        It should call drawRectangle()
+        drawRectangle()
+            Use appropriate parameters
+            Should draw a SINGLE rectangle
+        drawCirclePattern()
+            Use appropriate parameters
+        drawSuperPattern()
+            Use appropriate parameters
+            Randomly draw Rectangle and Circle patterns. Each pattern should based on random values.
+            Use reasonable random values (some can be negative) so patterns are drawn on the screen
+        setRandomColor()
+            Do not use any parameters
+            Set turtle to draw in a random color
+            Use at least 3 colors
+        done()
+            Called when user quits
+            Keeps the turtle window open
+
+    The Rectangle Pattern has 6 parts to it:
+        Center position - This is the x, y center point of the circular pattern that is drawn
+        Offset - This is the distance from the center position to the starting corner of each rectangle. It can be a positive or negative number
+        Height - The height of a rectangle
+        Width - The width of a rectangle
+        Count - The number of rectangles to draw within the 360 degree pattern.
+        Rotation - The number of degrees each rectangle is rotated in relation to the line from the Center Position to the starting corner of the rectangle
+        Each individual rectangle should be a new random color.
+
+    The Circle Pattern has 4 parts to it:
+        Center position - This is the x, y center point of the circular pattern that is drawn
+        Offset - This is the distance from the center position to starting drawing point of each circle.  It can be a positive or negative number. Note that the center point of each circle should be 'radius + offset' distance from the Center Position of the pattern.
+        Radius - The radius of the circle
+        Count - The number of circles to draw within the 360 degree pattern.
+        Each individual circle should be a new random color.
+
+Testing
+    TEST 1
+        Test to replicate the experiment mano did with the two rectangles
+        (this means that two rectangles are drawn in alternating colors offset from each other)
+            HAD TO CORRECT, HAD TURTLE ALIGN BY HEADING INSTEAD OF TURNING BASED OFF OF ROTATION
+    TEST 2
+        Test to replicate the experiment with a negative offset
+        (This means that the circle shape needs to look like a donut as turtle moves to position, turns inward, and then draws the circle)
+            HAD TO CORRECT, TOOK TWO HOURS TO FIGURE OUT TO JUST TURN TURTLE RIGHT 90 DEGREES >:(
