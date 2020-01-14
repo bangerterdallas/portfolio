@@ -1,0 +1,71 @@
+Requirement Specs-
+    (The Account class) Design a class named Account that contains:
+    A private int data field named id for the account.
+    A private float data field named balance for the account.
+    A private float data field named annualInterestRate that stores the current interest rate.
+    A constructor that creates an account with the specified id (default 0), initial balance (default 100),
+        and annual interest rate (default 0).
+    The accessor and mutator methods for id , balance , and annualInterestRate .
+    A method named getMonthlyInterestRate() that returns the monthly interest rate.
+    A method named getMonthlyInterest() that returns the monthly interest.
+    A method named withdraw that withdraws a specified amount from the account.
+    A method named deposit that deposits a specified amount to the account.
+
+System Analysis
+    No Formulas Used
+
+System Design
+    Create a Class named Account
+        Initialize default parameters
+        Create a method to create a display
+        Create setters and getters for each of the 7 options
+    Outside of the class create a main function for the user
+    Ask the user for input outside of a loop
+    Create a loop for the menu to run and be edited until the user is done
+    Create 8 options for the user to choose from that take from the class
+    If the user chooses option 8 exit the code and tell the user "thanks"
+
+
+Testing
+    TEST 1
+    Use default parameters
+    Print the default parameters (0, 100, 0)
+
+    TEST 2
+    Edit default parameters (100, 1000, 1)
+    Monthly Interest should be 0.8$
+
+UML
+Name- class Account:
+
+Data Members-
+    -id
+    -balance
+    -annual interest rate
+    monthly interest rate
+    monthly interest
+    withdrawal
+    deposit
+
+Methods-
+    def get_display():
+
+    def get_id(self):
+
+    def set_balance(self):
+
+    def get_balance_string(self):
+
+    def get_balance(self):
+
+    def set_annual_interest_rate(self):
+
+    def get_annual_interest_rate(self):
+
+    def get_monthly_interest_rate(self):
+
+    def get_monthly_interest(self):
+
+    def withdraw(self, withdraw_money):
+
+    def deposit(self, deposit_money):
