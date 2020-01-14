@@ -1,0 +1,106 @@
+SOFTWARE DEVELOPMENT PROCESS
+Requirements Specification
+    Create a program where a user can add and remove circles/rectangles to a list that you can remove specefic
+        objects from and can draw the objects using turtle that have colors and positions
+    5 pts: Proper display of all menus and input prompts
+    10 pts: User can create a circle object with proper content
+    10 pts: User can create a rectangle object with proper content
+    10 pts: Show menu and allow user to remove a shape
+    10 pts: All shapes drawn properly (location, size, color)
+    10 pts: Use a single list for all objects
+    5 pts: List to identify the color
+
+System Analysis
+    No formulas used
+
+System Design
+    # Create function
+    #define variables and objects
+    # Create a loop
+      # Create user menu
+        # Create menu for circle
+            # User inputs position, radius, and color. The position is the CENTER of the circle
+            # Allow red, yellow, blue, and green only
+            # Make sure that the color fits parameters
+            # Use the class
+            # Add the object to the list
+        # Create menu for rectangle
+            # User inputs position, height, width, color. The position is the lower left-hand corner
+            # Allow red, yellow, blue, and green only
+            # Make sure that the color fits parameters
+            # Use the class
+            # Add the object to the list
+        # Show the number of items in the list and let the user enter a number and remove that shape from the list.
+            # Show the list
+            # Ask the user to remove an object from the list
+            # Use pop to remove object from the list
+            # Clear the screen before drawing
+        # Exit the program
+
+Testing
+    Create a circle and a rectangle that fit all parameters
+    PASSES
+
+    Create two circles and rectangles that dont fit all parameters (color)
+        ERROR- needed to fix the draw as I had seperate method names for drawing
+
+
+CLASS
+Circle
+
+VALUES
+x: int
+y: int
+radius: int
+color: str
+
+METHODS
+Circle(x,y,radius,color) -constructor
+drawCircle (): str
+
+
+CLASS
+Rectangle
+x: int
+y: int
+width: int
+height: int
+color: str
+
+METHODS
+Rectangle(x,y,width,height,color) -constructor
+drawRectangle (): str
+
+
+
+
+
+EXAMPLE UML
+
+CLASS
+Card
+
+VALUES
+suit: str
+rank: str
+value: int
+deckValue: int
+
+METHODS
+Card(int) -constructor
+def card (int)
+def getSuit (): str
+def getRank (): str
+def getValue (): int
+
+
+CLASS
+Deck
+
+VALUES
+cardList: []
+
+METHODS
+Deck() -constructor
+shuffle(): None
+draw (): Card
